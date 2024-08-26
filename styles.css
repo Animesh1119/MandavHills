@@ -2,42 +2,48 @@ body {
   background-color: black;
   padding: 0;
   margin: 0;
-  height: 100vh;
+  height: 90vh;
+  width: 100%;
+  opacity: 65%;
+  background-color: black;
+  position: absolute;
 }
 
 .body-div {
   margin-left: 1%;
   margin-right: 3%;
-  display: flex;
   height: 100%;
   width:30;
-}
-
-.vid-div {
-  width: 45%; /* Original width for the video */
-  height: 110%; /* Fixed height as specified */
-  z-index: -1; /* Ensure the video stays behind all other content */
   position: relative;
-  overflow: hidden; /* Hide anything that overflows */
-  margin: 0;
 }
 
-.vid-div video {
-  width: -40%;
-  height: 100%;
-  object-fit: cover; /* Ensures the video covers the entire area */
+
+
+#background-video {
+  position: absolute; /* Position video in the background */
+  top: 0;
+  left: 0;
+  padding-top: 1%;
+  width: 100%; /* Make the video fill the width of the viewport */
+  height: 100%; /* Make the video fill the height of the viewport */
+  object-fit: cover; /* Ensure the video covers the entire area */
+  z-index: -1; /* Ensure the video stays behind all other content */
 }
 
 .main-para {
   margin-top: 6.3%;
   flex: 1; /* Allows this div to take up the remaining space */
   background: rgba(255, 255, 255, 0.1); /* Light transparent background */
-  backdrop-filter: blur(10px); /* Apply blur for the glass effect */
+  backdrop-filter: blur(3px); /* Apply blur for the glass effect */
   -webkit-backdrop-filter: blur(10px);
   height: 1000px; /* Match the height of .vid-div */
-  width: 200%;
+  width: 100%;
+  margin-left: 2%;
+  margin-right: 2%;
+  height: 50vh;
   padding: 20px;
   box-sizing: border-box;
+  position: relative;
 }
 
 p{
@@ -49,6 +55,7 @@ p{
     padding: 0% 0% 0% 0%;
     flex-shrink: 0; /* Prevent shrinking of the nav bar */
     z-index: 1; /* Make sure it stays above the video */
+    background-color: black;
 }
 
 .nav-bar{
